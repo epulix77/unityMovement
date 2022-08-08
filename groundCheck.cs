@@ -6,7 +6,8 @@ public class groundCheck : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "maa")
+        //"Ground" is the tag name
+        if (collision.collider.tag == "Ground")
         {
             liikkuminen.isGround = true;
         }
@@ -14,7 +15,7 @@ public class groundCheck : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag == "maa")
+        if (collision.collider.tag == "Ground")
         {
             liikkuminen.isGround = false;
         }
